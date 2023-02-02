@@ -14,11 +14,11 @@ export class NavComponent implements OnInit {
   //loggedIn: false;
   currentUser$: Observable<User| null> = of(null);
 
-  constructor( private accountService: AccountService) { }
+  constructor(public accountService: AccountService) { }
 
   ngOnInit(): void {
     //this.getCurrentUser();
-    this.currentUser$= this.accountService.currentUser$;
+    //this.currentUser$= this.accountService.currentUser$;
   }
 
   // getCurrentUser(){
