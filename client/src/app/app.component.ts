@@ -12,12 +12,17 @@ export class AppComponent implements OnInit {
 
   title = 'dating app';
 
+
+
   constructor( private accountService: AccountService){
 
   }
+
+
   ngOnInit(): void {
     // this.getUsers();
     this.setCurrentUser();
+
   }
 
   // getUsers(){
@@ -34,4 +39,7 @@ export class AppComponent implements OnInit {
     const user: User = JSON.parse(userString);
     this.accountService.setCurrentUser(user);
   }
+
+
+
 }
