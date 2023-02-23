@@ -88,9 +88,9 @@ export class PhotoEditorComponent implements OnInit {
         const photo = JSON.parse(response);
         this.member?.photos.push(photo);
         if (photo.isMain && this.user && this.member) {
-          // this.user. = photo.url;
-          // this.member.photoUrl = photo.url;
-          // this.accountService.setCurrentUser(this.user);
+          this.user.photoUrl = photo.url;
+          this.member.photoUrl = photo.url;
+          this.accountService.setCurrentUser(this.user);
         }
       }
     }
